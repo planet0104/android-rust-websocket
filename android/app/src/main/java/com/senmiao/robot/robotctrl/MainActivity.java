@@ -24,10 +24,8 @@ public class MainActivity extends Activity implements  WebSocketHandler{
         btn_connect = findViewById(R.id.btn_connect);
         btn_send = findViewById(R.id.btn_send);
         btn_stop = findViewById(R.id.btn_stop);
-
-        String mac_url = "ws://192.168.1.4:8414";
-        String win_url = "ws://192.168.192.122:8414";
-        webSocket = new WebSocket(win_url, this);
+        
+        webSocket = new WebSocket("ws://127.0.0.1:8081", this);
 
         btn_send.setOnClickListener(new View.OnClickListener() {
             @Override
