@@ -1,0 +1,15 @@
+[package]
+name = "ws_lib"
+version = "0.1.0"
+authors = ["jiaye"]
+
+[dependencies]
+ws = "*"
+android_logger = "*"
+log = "*"
+[target.'cfg(target_os="android")'.dependencies]
+jni = { version = "0.6.1", default-features = false }
+
+[lib]
+name = "ws"
+crate-type = ["staticlib", "cdylib"]
